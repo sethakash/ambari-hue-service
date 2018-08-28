@@ -24,7 +24,7 @@ def setup_hue():
   )
     
   Logger.info("Creating symlinks /usr/hdp/current/hadoop-client/lib/hue-plugins-3.11.0-SNAPSHOT.jar")
-  Link("{0}/desktop/libs/hadoop/java-lib/*".format(params.hue_dir),to = "/usr/hdp/current/hadoop-client/lib")
+  #Link("{0}/desktop/libs/hadoop/java-lib/*".format(params.hue_dir),to = "/usr/hdp/current/hadoop-client/lib")
   Execute('find {0} -iname "*.sh" | xargs chmod +x'.format(params.service_packagedir))
   # Create a home directory for solr user on HDFS
   params.HdfsResource(params.hue_hdfs_home_dir,
